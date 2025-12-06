@@ -1,17 +1,15 @@
 /caddy/frankenphp/frankenphp
 /internal/testserver/testserver
 /internal/testcli/testcli
-/dist
-# But re-include the static-php-cli subtree
+
+# Ignore everything under dist by default
+dist/*
+
+# But keep the static-php-cli subtree
 !dist/static-php-cli/
-dist/static-php-cli/*
-
-# Re-include the config directory
 !dist/static-php-cli/config/
-dist/static-php-cli/config/*
-
-# Finally, *really* keep this one file
 !dist/static-php-cli/config/source.json
+
 .DS_Store
 .idea/
 .vscode/
